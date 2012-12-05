@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/Classes/AsyncUdpSocket.m \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/Classes/AsyncUdpSocket.h
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/Classes/AsyncUdpSocket.m \
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/Classes/AsyncUdpSocket.h

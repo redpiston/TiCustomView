@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/Classes/TiPublicAPI.m \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/Classes/TiPublicAPI.h
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/Classes/TiPublicAPI.m \
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/Classes/TiPublicAPI.h

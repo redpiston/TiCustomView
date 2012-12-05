@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/Classes/CADebugMacros.cpp \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/Classes/CADebugMacros.h
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/Classes/CADebugMacros.cpp \
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/Classes/CADebugMacros.h

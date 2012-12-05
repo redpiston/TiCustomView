@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/main.m
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/main.m

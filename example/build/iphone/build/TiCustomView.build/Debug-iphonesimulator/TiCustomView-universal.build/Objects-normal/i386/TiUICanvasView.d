@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/Classes/TiUICanvasView.m
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/Classes/TiUICanvasView.m

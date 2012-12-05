@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/Classes/Mimetypes.m \
-  /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/Classes/Mimetypes.h
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/Classes/Mimetypes.m \
+  /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/Classes/Mimetypes.h

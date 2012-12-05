@@ -5,7 +5,7 @@ reporting an issue to help us understand your environment, build settings
 and aid in debugging. Please attach this log to any issue that you report.
 ================================================================================
 
-Starting build at 12/05/12 11:40
+Starting build at 12/05/12 16:43
 
 Build details:
 
@@ -19,7 +19,7 @@ Script arguments:
    /Users/shawn/Library/Application Support/Titanium/mobilesdk/osx/2.1.3.GA/iphone/builder.py
    simulator
    6.0
-   /Users/shawn/Documents/Titanium/TiCustomView
+   /Users/shawn/Documents/GitHub/TiCustomView/example
    com.redpiston.ticustomview
    TiCustomView
    universal
@@ -33,7 +33,7 @@ Xcode path is: /Applications/Xcode.app/Contents/Developer
 
 
 githash=15997d0, existing_git_hash=15997d0
-writing contents of /Users/shawn/Documents/Titanium/TiCustomView/build/iphone/project.xcconfig:
+writing contents of /Users/shawn/Documents/GitHub/TiCustomView/example/build/iphone/project.xcconfig:
 
 TI_VERSION=2.1.3.GA
 TI_SDK_DIR=/Users/shawn/Library/Application Support/Titanium/mobilesdk/osx/$(TI_VERSION)/iphone
