@@ -23,3 +23,11 @@ Titanium tab and navigation views:
   * The standard Tab Group in Android has a different look and feel than it does in iOS.  These custom views allow for the same views to be used across both platforms.
 3. Customized Views
   * These custom views allow for custom tab buttons, positioning, etc.
+
+##Usage
+
+To use these views, simply drop them into your project's Resource folder (see the example app).
+
+##Documentation
+
+Each view contains its own README which outlines the view's API.
