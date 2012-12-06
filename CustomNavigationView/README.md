@@ -72,4 +72,52 @@ The following properties can be defined when creating a new custom navigation vi
         <td>&quot;85%&quot;</td>
         <td>Defines the button height of the back and next buttons of the navigation view</td>
     </tr>
+    <tr>
+        <td>nextButtonImage</td>
+        <td>string</td>
+        <td>&quot;/CustomNavigationView/images/ next_button_default.png&quot;</td>
+        <td>The image of the next button (normal state)</td>
+    </tr>
+    <tr>
+        <td>nextButtonSelectedImage</td>
+        <td>string</td>
+        <td>&quot;/CustomNavigationView/images/ next_button_selected_default.png&quot;</td>
+        <td>The image of the next button (active state)</td>
+    </tr>
+    <tr>
+        <td>nextButtonRight</td>
+        <td>string</td>
+        <td>&quot;1%&quot;</td>
+        <td>Defines the padding between the next button the right-end of the navigation bar</td>
+    </tr>
+    <tr>
+        <td>backButtonImage</td>
+        <td>string</td>
+        <td>&quot;/CustomNavigationView/images/ back_button_default.png&quot;</td>
+        <td>The image of the back button (normal state)</td>
+    </tr>
+    <tr>
+        <td>backButtonSelectedImage</td>
+        <td>string</td>
+        <td>&quot;/CustomNavigationView/images/ back_button_selected_default.png&quot;</td>
+        <td>The image of the back button (active state)</td>
+    </tr>
+    <tr>
+        <td>backButtonLeft</td>
+        <td>string</td>
+        <td>&quot;1%&quot;</td>
+        <td>Defines the padding between the back button the left-end of the navigation bar</td>
+    </tr>
+    <tr>
+        <td>navBarImage</td>
+        <td>string</td>
+        <td>&quot;/CustomNavigationView/images/ navigation_bar_default.png&quot;</td>
+        <td>The image of the navigation bar</td>
+    </tr>
+     <tr>
+        <td>animationDuration</td>
+        <td>int</td>
+        <td>500</td>
+        <td>The time is takes (in ms) for the next view to transition onto the screen when the next or back buttons are pressed</td>
+    </tr>
 </table>
