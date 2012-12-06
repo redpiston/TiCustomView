@@ -25,8 +25,6 @@ var customNavView = CustomNavigationView({
 });
 ```
 
-##Properties
-
 The following properties can be defined when creating a new custom navigation view:
 
 <table>
@@ -119,5 +117,56 @@ The following properties can be defined when creating a new custom navigation vi
         <td>int</td>
         <td>500</td>
         <td>The time is takes (in ms) for the next view to transition onto the screen when the next or back buttons are pressed</td>
+    </tr>
+</table>
+
+##Creating A View
+
+Once a navigation view has been created, the following method can be called to create a new view for it:
+
+```
+customNavView.addView();
+```
+
+Note: This call uses the default paramaters.  This can also be called using your own custom examples:
+
+```
+customNavView.addView({
+    title:	'Example Navigation View'
+});
+```
+
+The following properties can be defined when adding a new view:
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>view</td>
+        <td>Titanium.UI.View</td>
+        <td>null</td>
+        <td>The view being added to the navigation view.  If not set, this method will create a default view.</td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>string</td>
+        <td>&quot;TEST&quot;</td>
+        <td>The title of the view presented in the navigation bar when this view is active.</td>
+    </tr>
+    <tr>
+        <td>titleColor</td>
+        <td>string</td>
+        <td>&quot;white&quot;</td>
+        <td>The color of the title.</td>
+    </tr>
+    <tr>
+        <td>titleFont</td>
+        <td>object</td>
+        <td>{fontSize:'14dp', fontWeight:'bold', fontFamily:'Helvetica Neue'}</td>
+        <td>The color of the title.</td>
     </tr>
 </table>
