@@ -22,4 +22,4 @@ Titanium tab and navigation views:
 2. Standardized Cross-Platform Views
   * The standard Tab Group in Android has a different look and feel than it does in iOS.  These custom views allow for the same views to be used across both platforms.
 3. Customized Views
-  * these custom views allow for custom tab buttons, positioning, etc.
+  * These custom views allow for custom tab buttons, positioning, etc.
