@@ -1,13 +1,13 @@
-#CustomTabGroup
+#CustomTabbedNavigationView
 
-A customized tab group view.
+A customized hybrid navigation view and tab group.
 
 ##Getting Started
 
-To use CustomTabGroup in your project, copy the folder into the Resource directory of your project, and import the code:
+To use CustomTabbedNavigationView in your project, copy the folder into the Resource directory of your project, and import the code:
 
 ```
-var CustomTabGroup = require('CustomTabGroup/CustomTabGroup');
+var CustomTabbedNavigationView = require('CustomTabbedNavigationView/CustomTabbedNavigationView');
 ```
 
 Then, create a new instance of the view (tabCount MUST be defined):
