@@ -167,7 +167,7 @@ The following properties can be defined when adding a new view:
         <td>titleFont</td>
         <td>object</td>
         <td>{fontSize:'14dp', fontWeight:'bold', fontFamily:'Helvetica Neue'}</td>
-        <td>The color of the title.</td>
+        <td>The font of the title.</td>
     </tr>
 </table>
 
