@@ -121,23 +121,23 @@ The following properties can be defined when creating a new custom tabbed naviga
     </tr>
 </table>
 
-##Adding a Tab
+##Creating A View
 
-Once a tab group has been created, the following method can be called to add a tab (and corresponding view):
+Once a tabbed navigation view has been created, the following method can be called to create a new view for it:
 
 ```
-customTabGroup.addTab();
+customTabbedNavigationView.addView();
 ```
 
 Note: This call uses the default paramaters.  This can also be called using your own custom examples:
 
 ```
-customTabGroup.addTab({
-    tabText:  'Example Tab'
+customTabbedNavigationView.addView({
+    view:   testView
 });
 ```
 
-The following properties can be defined when adding a new tab:
+The following properties can be defined when adding a new view:
 
 <table>
     <tr>
@@ -150,76 +150,58 @@ The following properties can be defined when adding a new tab:
         <td>view</td>
         <td>Titanium.UI.View</td>
         <td>null</td>
-        <td>The view being associated with this tab.  If not set, this method will create a default view.</td>
+        <td>The view being added to the tabbed navigation view.  If not set, this method will create a default view.</td>
     </tr>
     <tr>
-        <td>name</td>
+        <td>inactiveViewTabImage</td>
         <td>string</td>
-        <td>'default'</td>
-        <td>Defines the name of the tab view, which is used as an identifier in notification events.</td>
-    </tr>
-    <tr>
-        <td>tabButtonImageWidth</td>
-        <td>string</td>
-        <td>'80%'</td>
-        <td>The width of the tab button image.</td>
-    </tr>
-    <tr>
-        <td>tabButtonImageHeight</td>
-        <td>string</td>
-        <td>'50%'</td>
-        <td>The height of the tab button image.</td>
-    </tr>
-    <tr>
-        <td>tabButtonImage</td>
-        <td>string</td>
-        <td>'/CustomTabGroup/images/ tabgroup_button_off_default.png'</td>
+        <td>'/CustomTabbedNavigationView/images/ inactive_view_tab_default.png'</td>
         <td>The image of the tab button (normal state).</td>
     </tr>
     <tr>
-        <td>tabButtonImageSelected</td>
+        <td>activeViewTabImage</td>
         <td>string</td>
-        <td>'/CustomTabGroup/images/ tabgroup_button_on_default.png'</td>
+        <td>'/CustomTabbedNavigationView/images/ active_view_tab_default.png'</td>
         <td>The image of the tab button (active state).</td>
     </tr>
     <tr>
-        <td>tabText</td>
+        <td>viewTabImageWidth</td>
         <td>string</td>
-        <td>'TEST'</td>
-        <td>The title of the tab button.</td>
-    </tr>
-     <tr>
-        <td>tabTextBottom</td>
-        <td>string</td>
-        <td>'5%'</td>
-        <td>The padding between the bottom of the tab and the tab text.</td>
+        <td>'50%'</td>
+        <td>The width of the tab button.</td>
     </tr>
     <tr>
-        <td>tabFont</td>
+        <td>viewTabImageHeight</td>
+        <td>string</td>
+        <td>'50%'</td>
+        <td>The height of the tab button.</td>
+    </tr>
+    <tr>
+        <td>viewTabFont</td>
         <td>object</td>
         <td>{fontSize:'8dp', fontWeight:'bold', fontFamily:'Helvetica Neue'}</td>
         <td>The font of the tab text.</td>
     </tr>
-     <tr>
-        <td>tabFontColor</td>
+    <tr>
+        <td>activeViewTabColor</td>
         <td>string</td>
-        <td>'white'</td>
-        <td>The color of the title.</td>
+        <td>'black'</td>
+        <td>The color of the tab text when the tab is active.</td>
     </tr>
     <tr>
-        <td>tabFontColorSelected</td>
+        <td>inactiveViewTabColor</td>
         <td>string</td>
         <td>'white'</td>
-        <td>The color of the title when the tab is selected.</td>
+        <td>he color of the tab text when the tab is inactive.</td>
     </tr>
 </table>
 
-##Selecting a Tab
+##Selecting a View
 
-Once the tabs are created, the following method can be called to programmatically select a tab:
+Once the tabbed views are created, the following method can be called to programmatically select a view:
 
 ```
-customTabGroup.selectTab(1);
+customTabbedNavigationView.selectView(1);
 ```
 
 This method is called with the following following parameters:
@@ -233,54 +215,6 @@ This method is called with the following following parameters:
     <tr>
         <td>index</td>
         <td>int</td>
-        <td>The index of the tab to select.</td>
-    </tr>
-</table>
-
-##Notifications
-
-These custom notifications are fired during the following circumstances:
-
-###gainFocus
-
-This is fired when a tab becomes selected.  The following parameters are passed to the event listener:
-
-<table>
-    <tr>
-        <th>Property</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>tabName</td>
-        <td>string</td>
-        <td>The name of the specific tab to gain focus.</td>
-    </tr>
-    <tr>
-        <td>tabGroupName</td>
-        <td>string</td>
-        <td>The name of the tab group to gain focus.</td>
-    </tr>
-</table>
-
-###loseFocus
-
-This is fired when a tab becomes unselected.  The following parameters are passed to the event listener:
-
-<table>
-    <tr>
-        <th>Property</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>tabName</td>
-        <td>string</td>
-        <td>The name of the specific tab to lose focus.</td>
-    </tr>
-    <tr>
-        <td>tabGroupName</td>
-        <td>string</td>
-        <td>The name of the tab group to lose focus.</td>
+        <td>The index of the view to select.</td>
     </tr>
 </table>
