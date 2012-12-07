@@ -193,9 +193,9 @@ This method is called with the following following parameters:
 
 These custom notifications are fired during the following circumstances:
 
-###navAnimationBegin
+###gainFocus
 
-This is fired when a transition animation to a new view begins.  The following parameters are passed to the event listener:
+This is fired when a tab becomes selected.  The following parameters are passed to the event listener:
 
 <table>
     <tr>
@@ -204,15 +204,20 @@ This is fired when a transition animation to a new view begins.  The following p
         <th>Description</th>
     </tr>
     <tr>
-        <td>currentViewIndex</td>
-        <td>int</td>
-        <td>The index of the current view in the array of views for this navigation view.</td>
+        <td>tabName</td>
+        <td>string</td>
+        <td>The name of the specific tab to gain focus.</td>
+    </tr>
+    <tr>
+        <td>tabGroupName</td>
+        <td>string</td>
+        <td>The name of the tab group to gain focus.</td>
     </tr>
 </table>
 
-###navAnimationEnd
+###loseFocus
 
-This is fired when a transition animation to a new view ends.  The following parameters are passed to the event listener:
+This is fired when a tab becomes unselected.  The following parameters are passed to the event listener:
 
 <table>
     <tr>
@@ -221,8 +226,13 @@ This is fired when a transition animation to a new view ends.  The following par
         <th>Description</th>
     </tr>
     <tr>
-        <td>currentViewIndex</td>
-        <td>int</td>
-        <td>The index of the current view in the array of views for this navigation view.</td>
+        <td>tabName</td>
+        <td>string</td>
+        <td>The name of the specific tab to lose focus.</td>
+    </tr>
+    <tr>
+        <td>tabGroupName</td>
+        <td>string</td>
+        <td>The name of the tab group to lose focus.</td>
     </tr>
 </table>
