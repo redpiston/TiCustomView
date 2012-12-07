@@ -10,23 +10,23 @@ To use CustomTabbedNavigationView in your project, copy the folder into the Reso
 var CustomTabbedNavigationView = require('CustomTabbedNavigationView/CustomTabbedNavigationView');
 ```
 
-Then, create a new instance of the view (tabCount MUST be defined):
+Then, create a new instance of the view:
 
 ```
-var customTabGroup = CustomTabGroup();
+var customTabbedNavigationView = CustomTabbedNavigationView();
 ```
 
 Note: This call uses the default paramaters.  This can also be called using your own custom examples:
 
 ```
-var customTabGroup = CustomTabGroup({
-    position: 'bottom',
-    height:   '80%',
-    tabCount:  2
+var customTabbedNavigationView = CustomTabbedNavigationView({
+    position:   'bottom',
+    height:     '80%',
+    viewCount:  2
 });
 ```
 
-The following properties can be defined when creating a new custom navigation view:
+The following properties can be defined when creating a new custom tabbed navigation view:
 
 <table>
     <tr>
@@ -36,40 +36,88 @@ The following properties can be defined when creating a new custom navigation vi
         <th>Description</th>
     </tr>
     <tr>
-        <td>name</td>
-        <td>string</td>
-        <td>'default'</td>
-        <td>Defines the name of the tab group, which is used as an identifier in notification events.</td>
-    </tr>
-    <tr>
         <td>height</td>
         <td>string</td>
         <td>'auto'</td>
-        <td>Defines the height of the tab view (and subsequently the maximum height of all its views).</td>
+        <td>Defines the height of the tabbed navigation view (and subsequently the maximum height of all its views).</td>
     </tr>
     <tr>
         <td>width</td>
         <td>string</td>
         <td>'auto'</td>
-        <td>Defines the width of the tab view (and subsequently the maximum width of all its views).</td>
+        <td>Defines the width of the tabbed navigation view (and subsequently the maximum width of all its views).</td>
+    </tr>
+     <tr>
+        <td>buttonWidth</td>
+        <td>string</td>
+        <td>'14%'</td>
+        <td>Defines the button width of the back and next buttons of the tabbed navigation view.</td>
     </tr>
     <tr>
-        <td>tabBarHeight</td>
+        <td>buttonHeight</td>
+        <td>string</td>
+        <td>'85%'</td>
+        <td>Defines the button height of the back and next buttons of the tabbed navigation view.</td>
+    </tr>
+    <tr>
+        <td>navBarHeight</td>
         <td>string</td>
         <td>'10%'</td>
-        <td>Defines the height of the tab bar.</td>
+        <td>Defines the height of the nav bar.</td>
     </tr>
     <tr>
         <td>position</td>
         <td>string</td>
-        <td>'bottom'</td>
-        <td>Defines where the tab bar will be on the view.  This can be either 'top' or 'bottom'.</td>
+        <td>'top'</td>
+        <td>Defines where the nav bar will be on the view.  This can be either 'top' or 'bottom'.</td>
     </tr>
     <tr>
-        <td>tabCount</td>
+        <td>viewCount</td>
         <td>int</td>
         <td>0</td>
-        <td>The number of tabs (and views) in the tab group.  Note: this parameter is MANDATORY</td>
+        <td>The number of tabs (and views) in the tabbed navigation view.  Note: this parameter is MANDATORY</td>
+    </tr>
+    <tr>
+        <td>nextButtonImage</td>
+        <td>string</td>
+        <td>'/CustomTabbedNavigationView/images/ next_button_default.png'</td>
+        <td>The image of the next button (normal state).</td>
+    </tr>
+    <tr>
+        <td>nextButtonSelectedImage</td>
+        <td>string</td>
+        <td>'/CustomTabbedNavigationView/images/ next_button_selected_default.png'</td>
+        <td>The image of the next button (active state).</td>
+    </tr>
+    <tr>
+        <td>nextButtonRight</td>
+        <td>string</td>
+        <td>'1%'</td>
+        <td>Defines the padding between the next button the right-end of the navigation bar.</td>
+    </tr>
+    <tr>
+        <td>backButtonImage</td>
+        <td>string</td>
+        <td>'/CustomTabbedNavigationView/images/ back_button_default.png'</td>
+        <td>The image of the back button (normal state).</td>
+    </tr>
+    <tr>
+        <td>backButtonSelectedImage</td>
+        <td>string</td>
+        <td>'/CustomTabbedNavigationView/images/ back_button_selected_default.png'</td>
+        <td>The image of the back button (active state).</td>
+    </tr>
+    <tr>
+        <td>backButtonLeft</td>
+        <td>string</td>
+        <td>'1%'</td>
+        <td>Defines the padding between the back button the left-end of the navigation bar.</td>
+    </tr>
+     <tr>
+        <td>animationDuration</td>
+        <td>int</td>
+        <td>500</td>
+        <td>The time is takes (in ms) for the next view to transition onto the screen when the next or back buttons are pressed.</td>
     </tr>
 </table>
 
