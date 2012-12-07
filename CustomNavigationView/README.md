@@ -1,4 +1,4 @@
-##CustomNavigationView
+#CustomNavigationView
 
 A customized navigation view.
 
@@ -168,5 +168,43 @@ The following properties can be defined when adding a new view:
         <td>object</td>
         <td>{fontSize:'14dp', fontWeight:'bold', fontFamily:'Helvetica Neue'}</td>
         <td>The color of the title.</td>
+    </tr>
+</table>
+
+##Notifications
+
+These custom notifications are fired during the following circumstances:
+
+###navAnimationBegin
+
+This is fired when a transition animation to a new view begins.  The following parameters are passed to the event listener:
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>currentViewIndex</td>
+        <td>int</td>
+        <td>The index of the current view in the array of views for this navigation view.</td>
+    </tr>
+</table>
+
+###navAnimationEnd
+
+This is fired when a transition animation to a new view ends.  The following parameters are passed to the event listener:
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>currentViewIndex</td>
+        <td>int</td>
+        <td>The index of the current view in the array of views for this navigation view.</td>
     </tr>
 </table>
