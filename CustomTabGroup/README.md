@@ -10,7 +10,7 @@ To use CustomTabGroup in your project, copy the folder into the Resource directo
 var CustomTabGroup = require('CustomTabGroup/CustomTabGroup');
 ```
 
-Then, create a new instance of the view (tabCount MUST be defined):
+Then, create a new instance of the view:
 
 ```
 var customTabGroup = CustomTabGroup();
