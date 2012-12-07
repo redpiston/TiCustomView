@@ -1,4 +1,4 @@
-##CustomTabGroup
+#CustomTabGroup
 
 A customized tab group view.
 
@@ -35,88 +35,34 @@ The following properties can be defined when creating a new custom navigation vi
         <th>Description</th>
     </tr>
     <tr>
-        <td>position</td>
+        <td>name</td>
         <td>string</td>
-        <td>&quot;top&quot;</td>
-        <td>Defines where the navigation bar will be on the view.  This can be either &quot;top&quot; or &quot;bottom&quot;</td>
-    </tr>
-    <tr>
-        <td>width</td>
-        <td>string</td>
-        <td>&quot;auto&quot;</td>
-        <td>Defines the width of the navigation view (and subsequently the maximum width of all its views)</td>
+        <td>'default'</td>
+        <td>Defines the name of the tab group, which is used as an identifier in notification events.</td>
     </tr>
     <tr>
         <td>height</td>
         <td>string</td>
-        <td>&quot;auto&quot;</td>
-        <td>Defines the height of the navigation view (and subsequently the maximum height of all its views)</td>
+        <td>'auto'</td>
+        <td>Defines the height of the tab view (and subsequently the maximum height of all its views)</td>
     </tr>
     <tr>
-        <td>navBarHeight</td>
+        <td>width</td>
         <td>string</td>
-        <td>&quot;10%&quot;</td>
-        <td>Defines the height of the navigation bar</td>
+        <td>'auto'</td>
+        <td>Defines the width of the tab view (and subsequently the maximum width of all its views)</td>
     </tr>
     <tr>
-        <td>buttonWidth</td>
+        <td>tabBarHeight</td>
         <td>string</td>
-        <td>&quot;14%&quot;</td>
-        <td>Defines the button width of the back and next buttons of the navigation view</td>
+        <td>'10%'</td>
+        <td>Defines the height of the tab bar</td>
     </tr>
     <tr>
-        <td>buttonHeight</td>
+        <td>position</td>
         <td>string</td>
-        <td>&quot;85%&quot;</td>
-        <td>Defines the button height of the back and next buttons of the navigation view</td>
-    </tr>
-    <tr>
-        <td>nextButtonImage</td>
-        <td>string</td>
-        <td>&quot;/CustomNavigationView/images/ next_button_default.png&quot;</td>
-        <td>The image of the next button (normal state)</td>
-    </tr>
-    <tr>
-        <td>nextButtonSelectedImage</td>
-        <td>string</td>
-        <td>&quot;/CustomNavigationView/images/ next_button_selected_default.png&quot;</td>
-        <td>The image of the next button (active state)</td>
-    </tr>
-    <tr>
-        <td>nextButtonRight</td>
-        <td>string</td>
-        <td>&quot;1%&quot;</td>
-        <td>Defines the padding between the next button the right-end of the navigation bar</td>
-    </tr>
-    <tr>
-        <td>backButtonImage</td>
-        <td>string</td>
-        <td>&quot;/CustomNavigationView/images/ back_button_default.png&quot;</td>
-        <td>The image of the back button (normal state)</td>
-    </tr>
-    <tr>
-        <td>backButtonSelectedImage</td>
-        <td>string</td>
-        <td>&quot;/CustomNavigationView/images/ back_button_selected_default.png&quot;</td>
-        <td>The image of the back button (active state)</td>
-    </tr>
-    <tr>
-        <td>backButtonLeft</td>
-        <td>string</td>
-        <td>&quot;1%&quot;</td>
-        <td>Defines the padding between the back button the left-end of the navigation bar</td>
-    </tr>
-    <tr>
-        <td>navBarImage</td>
-        <td>string</td>
-        <td>&quot;/CustomNavigationView/images/ navigation_bar_default.png&quot;</td>
-        <td>The image of the navigation bar</td>
-    </tr>
-     <tr>
-        <td>animationDuration</td>
-        <td>int</td>
-        <td>500</td>
-        <td>The time is takes (in ms) for the next view to transition onto the screen when the next or back buttons are pressed</td>
+        <td>'bottom'</td>
+        <td>Defines where the tab bar will be on the view.  This can be either 'top' or 'bottom'</td>
     </tr>
 </table>
 
