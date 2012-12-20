@@ -166,18 +166,20 @@ function CustomTabGroup(args) {
 		tabBar.add(tabButton);
 		
 		tabButton.addEventListener('click', function(){
-			// unselect the currently selected tab and hide the view
+			// get the old tab view
+			var old_tab = null;
+			
 			if (property['selectedTab'] != null) {
-				// fire lose focus event for the currently selected view
-				Ti.App.fireEvent('loseFocus', {tabName: property['tabBarViews'][property['selectedTab']].tabName, tabGroupName: property['tabBarViews'][property['selectedTab']].tabGroupName});
-				
-				property['tabBarButtons'][property['selectedTab']].tabImageView.backgroundImage = property['tabBarButtons'][property['selectedTab']].tabImage;
-				property['tabBarButtons'][property['selectedTab']].tabLabel.color = property['tabBarButtons'][property['selectedTab']].tabFontColor;
-				property['tabBarViews'][property['selectedTab']].visible = false;
+				old_tab = property['selectedTab'];
 			}
 			
 			// set the current tab button index as the selected tab
 			property['selectedTab'] = property['tabBarButtons'].indexOf(tabButton);
+			
+			// if the old tab is the currently selected tab, do nothing
+			if (old_tab == property['selectedTab']) {
+				return;
+			}
 			
 			// fire gain focus event for the newly selected view
 			Ti.App.fireEvent('gainFocus', {tabName: property['tabBarViews'][property['selectedTab']].tabName, tabGroupName: property['tabBarViews'][property['selectedTab']].tabGroupName});
@@ -186,6 +188,16 @@ function CustomTabGroup(args) {
 			property['tabBarButtons'][property['selectedTab']].tabImageView.backgroundImage = tabButton.tabImageSelected;
 			property['tabBarButtons'][property['selectedTab']].tabLabel.color = property['tabBarButtons'][property['selectedTab']].tabFontColorSelected;
 			property['tabBarViews'][property['selectedTab']].visible = true;
+			
+			// hide the old tab view
+			if (old_tab != null) {
+				// fire lose focus event for the currently selected view
+				Ti.App.fireEvent('loseFocus', {tabName: property['tabBarViews'][old_tab].tabName, tabGroupName: property['tabBarViews'][old_tab].tabGroupName});
+				
+				property['tabBarButtons'][old_tab].tabImageView.backgroundImage = property['tabBarButtons'][old_tab].tabImage;
+				property['tabBarButtons'][old_tab].tabLabel.color = property['tabBarButtons'][old_tab].tabFontColor;
+				property['tabBarViews'][old_tab].visible = false;
+			}
 		});
 		
 		// push tab button and view to arrays for later use
