@@ -74,8 +74,8 @@ function CustomTabGroup(args) {
 		var values = {
 			view:					null,
 			name:					'default',
-			tabButtonImageWidth:	'80%',
-			tabButtonImageHeight:	'50%',
+			tabButtonImageWidth:	'90%',
+			tabButtonImageHeight:	'70%',
 			tabButtonCenter:		null,
 			tabButtonWidth:			null,
 			tabButtonImage:			'/CustomTabGroup/images/tabgroup_button_off_default.png',
@@ -181,14 +181,6 @@ function CustomTabGroup(args) {
 				return;
 			}
 			
-			// fire gain focus event for the newly selected view
-			Ti.App.fireEvent('gainFocus', {tabName: property['tabBarViews'][property['selectedTab']].tabName, tabGroupName: property['tabBarViews'][property['selectedTab']].tabGroupName});
-			
-			// show the tab view
-			property['tabBarButtons'][property['selectedTab']].tabImageView.backgroundImage = tabButton.tabImageSelected;
-			property['tabBarButtons'][property['selectedTab']].tabLabel.color = property['tabBarButtons'][property['selectedTab']].tabFontColorSelected;
-			property['tabBarViews'][property['selectedTab']].visible = true;
-			
 			// hide the old tab view
 			if (old_tab != null) {
 				// fire lose focus event for the currently selected view
@@ -198,6 +190,14 @@ function CustomTabGroup(args) {
 				property['tabBarButtons'][old_tab].tabLabel.color = property['tabBarButtons'][old_tab].tabFontColor;
 				property['tabBarViews'][old_tab].visible = false;
 			}
+			
+			// fire gain focus event for the newly selected view
+			Ti.App.fireEvent('gainFocus', {tabName: property['tabBarViews'][property['selectedTab']].tabName, tabGroupName: property['tabBarViews'][property['selectedTab']].tabGroupName});
+			
+			// show the tab view
+			property['tabBarButtons'][property['selectedTab']].tabImageView.backgroundImage = tabButton.tabImageSelected;
+			property['tabBarButtons'][property['selectedTab']].tabLabel.color = property['tabBarButtons'][property['selectedTab']].tabFontColorSelected;
+			property['tabBarViews'][property['selectedTab']].visible = true;
 		});
 		
 		// push tab button and view to arrays for later use
