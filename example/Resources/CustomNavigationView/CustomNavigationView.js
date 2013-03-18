@@ -7,21 +7,22 @@
 function CustomNavigationView(args) {
 	// default class properties
 	var property = {
+		name:						null,
 		backgroundColor:			'black',
 		position:					'top',
 		height:						'auto',
 		width:						'auto',
 		buttonWidth:				'14%',
-		buttonHeight:				'85%',
+		buttonHeight:				'100%',
 		navBarHeight:				'10%',
 		navViewHeight:				null,
 		navViews:					null,
 		currentViewIndex:			null,
 		nextButtonImage:			'/CustomNavigationView/images/next_button_default.png',
-		nextButtonSelectedImage:	'/CustomNavigationView/images/next_button_selected_default.png',
+		nextButtonSelectedImage:	'none',
 		nextButtonRight:			'1%',
 		backButtonImage:			'/CustomNavigationView/images/back_button_default.png',
-		backButtonSelectedImage:	'/CustomNavigationView/images/back_button_selected_default.png',
+		backButtonSelectedImage:	'none',
 		backButtonLeft:				'1%',
 		navBarImage:				'/CustomNavigationView/images/navigation_bar_default.png',
 		screenHeight:				Ti.Platform.displayCaps.platformHeight,
@@ -119,26 +120,25 @@ function CustomNavigationView(args) {
 	});
 	
 	// next button
-	var nextButton = Titanium.UI.createView({
+	var nextButton = Titanium.UI.createButton({
 		backgroundImage:			property['nextButtonImage'],
+		backgroundSelectedImage:	property['nextButtonSelectedImage'],
 		height:						property['buttonHeight'],
 		width:						property['buttonWidth'],
 		right:						property['nextButtonRight'],
 	});
 	
-	nextButton.addEventListener('touchstart', function(){
-		// set button background to selected
-		nextButton.backgroundImage = property['nextButtonSelectedImage'];
-	});
-	
-	nextButton.addEventListener('touchend', function(){
-		// set button background to unselected
-		nextButton.backgroundImage = property['nextButtonImage'];
-		
-		// next button should not do anything if the current view is the last view
+	nextButton.addEventListener('click', function(){
+		// check if navigation view is at the end
 		if (property['currentViewIndex'] == property['navViews'].length-1) {
+			
+			// fire navigation end action event and return
+			Ti.App.fireEvent('navEndAction', {name: property['name']});
 			return;
 		}
+		
+		// unhide the back button
+		backButton.visible = true;
 		
 		// fire navigation animation begin event
 		Ti.App.fireEvent('navAnimationBegin', {currentViewIndex: property['currentViewIndex']});
@@ -151,6 +151,14 @@ function CustomNavigationView(args) {
 		
     	// unhide and move the next view onto the screen
     	property['currentViewIndex'] += 1;
+    	
+    	// check if navigation view is going to be at the end
+		if (property['currentViewIndex'] == property['navViews'].length-1) {
+			
+			// fire navigation end visible event
+			Ti.App.fireEvent('navEndVisible', {name: property['name']});
+		}
+    	
     	property['navViews'][property['currentViewIndex']].right = -(property['screenWidth']);
     	property['navViews'][property['currentViewIndex']].left = property['screenWidth'];
    
@@ -163,26 +171,25 @@ function CustomNavigationView(args) {
 	navBar.add(nextButton);
 	
 	// back button
-	var backButton = Titanium.UI.createView({
+	var backButton = Titanium.UI.createButton({
 		backgroundImage:			property['backButtonImage'],
+		backgroundSelectedImage:	property['backButtonSelectedImage'],
 		height:						property['buttonHeight'],
 		width:						property['buttonWidth'],
 		left:						property['backButtonLeft'],
 	});
 	
-	backButton.addEventListener('touchstart', function(){
-		// set button background to selected
-		backButton.backgroundImage = property['backButtonSelectedImage'];
-	});
-	
-	backButton.addEventListener('touchend', function(){
-		// set button background to unselected
-		backButton.backgroundImage = property['backButtonImage'];
-		
-		// back button should not do anything if the current view is the first view
+	backButton.addEventListener('click', function(){
+		// check if navigation view is at the start
 		if (property['currentViewIndex'] == 0) {
+			
+			// fire navigation start action event and return
+			Ti.App.fireEvent('navStartAction', {name: property['name']});
 			return;
 		}
+		
+		// unhide the next button
+		nextButton.visible = true;
 		
 		// fire navigation animation begin event
 		Ti.App.fireEvent('navAnimationBegin', {currentViewIndex: property['currentViewIndex']});
@@ -195,6 +202,14 @@ function CustomNavigationView(args) {
 
     	// unhide and move the previous view onto the screen
     	property['currentViewIndex'] -= 1;
+    	
+    	// check if navigation view is going to be at the start
+		if (property['currentViewIndex'] == 0) {
+			
+			// fire navigation start visible event
+			Ti.App.fireEvent('navStartVisible', {name: property['name']});
+		}
+    	
     	property['navViews'][property['currentViewIndex']].right = property['screenWidth'];
     	property['navViews'][property['currentViewIndex']].left = -(property['screenWidth']);
     	
@@ -214,7 +229,7 @@ function CustomNavigationView(args) {
 			view:				null,
 			title:				'TEST',
 			titleColor:			'white',
-			titleFont:			{fontSize:'14dp',fontWeight:'bold',fontFamily:'Helvetica Neue'},
+			titleFont:			{fontSize:'8dp',fontWeight:'bold',fontFamily:'Helvetica Neue'},
 		};
 	
 		// replace default values with supplied arguments
@@ -281,6 +296,22 @@ function CustomNavigationView(args) {
 	
 	self.nextView = function() {
 		nextButton.fireEvent('click');
+	}
+	
+	self.hideBackButton = function() {
+		backButton.visible = false;
+	}
+	
+	self.showBackButton = function() {
+		backButton.visible = true;
+	}
+	
+	self.hideNextButton = function() {
+		nextButton.visible = false;
+	}
+	
+	self.showNextButton = function() {
+		nextButton.visible = true;
 	}
 	
 	return self;
