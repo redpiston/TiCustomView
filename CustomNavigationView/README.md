@@ -254,3 +254,37 @@ This is fired when the next button is pressed on the last view of the navigation
         <td>The name of the navigation view.</td>
     </tr>
 </table>
+
+###navStartVisible
+
+This is fired when the first view of the navigation view becomes visible.  The following parameters are passed to the event listener:
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>The name of the navigation view.</td>
+    </tr>
+</table>
+
+###navEndVisible
+
+This is fired when the last view of the navigation view becomes visible.  The following parameters are passed to the event listener:
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>The name of the navigation view.</td>
+    </tr>
+</table>
