@@ -35,6 +35,18 @@ The following properties can be defined when creating a new custom navigation vi
         <th>Description</th>
     </tr>
     <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>null</td>
+        <td>The name of the navigation view.  Used in events to identify the view.</td>
+    </tr>
+    <tr>
+        <td>backgroundColor</td>
+        <td>string</td>
+        <td>'black'</td>
+        <td>The default background color of the navigation view.</td>
+    </tr>
+    <tr>
         <td>position</td>
         <td>string</td>
         <td>'top'</td>
