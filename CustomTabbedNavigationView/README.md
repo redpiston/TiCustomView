@@ -230,3 +230,75 @@ This method is called with the following following parameters:
         <td>The index of the view to select.</td>
     </tr>
 </table>
+
+##Notifications
+
+These custom notifications are fired during the following circumstances:
+
+###navStartAction
+
+This is fired when the back button is pressed on the first view of the navigation view.  The following parameters are passed to the event listener:
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>The name of the navigation view.</td>
+    </tr>
+</table>
+
+###navEndAction
+
+This is fired when the next button is pressed on the last view of the navigation view.  The following parameters are passed to the event listener:
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>The name of the navigation view.</td>
+    </tr>
+</table>
+
+###navStartVisible
+
+This is fired when the first view of the navigation view becomes visible.  The following parameters are passed to the event listener:
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>The name of the navigation view.</td>
+    </tr>
+</table>
+
+###navEndVisible
+
+This is fired when the last view of the navigation view becomes visible.  The following parameters are passed to the event listener:
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>The name of the navigation view.</td>
+    </tr>
+</table>
