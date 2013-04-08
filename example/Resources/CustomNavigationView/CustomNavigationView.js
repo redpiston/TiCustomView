@@ -294,6 +294,30 @@ function CustomNavigationView(args) {
 		self.add(newView);
 	}
 	
+	self.reset = function() {
+		
+		// hide current title
+		property['navViews'][property['currentViewIndex']].title.opacity = 0;
+		
+		// reset back to the first view
+		for (var i = 0; i < property['navViews'].length; i++) {
+			
+			if (i == 0) {
+				property['navViews'][i].right = 0;
+				property['navViews'][i].left = 0;
+			} else {
+				property['navViews'][i].right = -(property['screenWidth']);
+				property['navViews'][i].left = property['screenWidth'];
+			}	
+		}
+		
+		// reset index to first view
+		property['currentViewIndex'] = 0;
+		
+		// show new title
+		property['navViews'][property['currentViewIndex']].title.opacity = 1;
+	}
+	
 	self.nextView = function() {
 		nextButton.fireEvent('click');
 	}
