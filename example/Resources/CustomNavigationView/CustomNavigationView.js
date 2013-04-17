@@ -315,7 +315,7 @@ function CustomNavigationView(args) {
 		property['currentViewIndex'] = 0;
 		
 		// show new title
-		property['navViews'][property['currentViewIndex']].title.opacity = 1;
+		property['navViews'][property['currentViewIndex']].title.animate(titleFadeInAnimation);
 	}
 	
 	self.nextView = function() {
